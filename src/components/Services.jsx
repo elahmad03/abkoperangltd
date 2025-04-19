@@ -46,19 +46,19 @@ export default function Services() {
     <section
       id="services"
       name="services"
-      className="py-20 px-6 md:px-20 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-500"
+      className="py-12 px-4 sm:px-6 md:px-10 lg:px-20 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-500"
     >
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-extrabold mb-12 text-gray-900 dark:text-white"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-10 sm:mb-12 text-gray-900 dark:text-white"
         >
           Our <span className="text-blue-600 dark:text-blue-400">Services</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -68,16 +68,18 @@ export default function Services() {
               className="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden"
             >
               <Link to={service.link} className="block">
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h5 className="text-2xl font-semibold mb-3 text-gray-900 dark:text-white">
+                <div className="w-full aspect-[4/3] overflow-hidden">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4 sm:p-6">
+                  <h5 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3 text-gray-900 dark:text-white">
                     {service.title}
                   </h5>
-                  <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
                     {service.text}
                   </p>
                 </div>

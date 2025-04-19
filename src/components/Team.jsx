@@ -14,7 +14,7 @@ const team = [
     social: {
       twitter: "https://twitter.com/yourhandle",
       facebook: "https://facebook.com/yourhandle",
-      whatsapp: "+2348138804305", // only numbers, no plus sign
+      whatsapp: "2348138804305",
     },
   },
   {
@@ -24,7 +24,7 @@ const team = [
     social: {
       twitter: "https://twitter.com",
       facebook: "https://facebook.com",
-      whatsapp: "+23407042818174",
+      whatsapp: "2347042818174",
     },
   },
   {
@@ -34,7 +34,7 @@ const team = [
     social: {
       twitter: "https://twitter.com/",
       facebook: "https://facebook.com/",
-      whatsapp: "+2347044265812",
+      whatsapp: "2347044265812",
     },
   },
   {
@@ -44,7 +44,7 @@ const team = [
     social: {
       twitter: "https://twitter.com/ahmadkhan03",
       facebook: "https://facebook.com/el.ahmed5",
-      whatsapp: "+2348164336141",
+      whatsapp: "2348164336141",
     },
   },
 ];
@@ -53,34 +53,38 @@ const TeamSection = () => (
   <section
     id="team"
     name="team"
-    className="py-20 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-6 md:px-20"
+    className="py-16 sm:py-20 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 px-4 sm:px-6 lg:px-20"
   >
-    <div className="max-w-6xl mx-auto text-center">
+    <div className="max-w-7xl mx-auto text-center">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold mb-12"
+        className="text-3xl sm:text-4xl font-bold mb-10 sm:mb-12"
       >
-        Meet the{" "}
-        <span className="text-blue-600 dark:text-blue-400">Team</span>
+        Meet the <span className="text-blue-600 dark:text-blue-400">Team</span>
       </motion.h2>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-10">
         {team.map((member, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="bg-gray-100 dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300"
+            transition={{ duration: 0.5, delay: index * 0.15 }}
+            className="bg-gray-100 dark:bg-gray-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center"
           >
             <img
               src={member.image}
               alt={member.name}
-              className="w-24 h-24 mx-auto rounded-full object-cover border-4 border-blue-500 mb-4"
+              className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-blue-500 mb-4"
             />
-            <h3 className="text-xl font-semibold">{member.name}</h3>
-            <p className="text-blue-600 dark:text-blue-400">{member.role}</p>
+            <h3 className="text-lg sm:text-xl font-semibold text-center">
+              {member.name}
+            </h3>
+            <p className="text-blue-600 dark:text-blue-400 text-sm sm:text-base">
+              {member.role}
+            </p>
 
             {/* Social Media Icons */}
             <div className="flex justify-center gap-4 mt-4">

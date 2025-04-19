@@ -16,13 +16,13 @@ const DetailsPage = ({ phones }) => {
   }
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 py-20 px-4">
-      <div className="max-w-5xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-8">
+    <div className="bg-gray-100 dark:bg-gray-900 py-16 sm:py-20 px-4 sm:px-0 overflow-x-hidden">
+      <div className="max-w-full sm:max-w-5xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12 sm:px-2">
+        <h1 className="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-8">
           {phone.name}
         </h1>
-        <div className="md:flex md:gap-10">
-          <div className="mb-8 md:mb-0 md:w-1/2">
+        <div className="flex flex-col sm:flex-row sm:gap-10">
+          <div className="mb-8 sm:mb-0 sm:w-1/2">
             <div className="h-96 bg-gray-200 dark:bg-gray-700 flex items-center justify-center rounded-lg p-4">
               <img
                 src={phone.image}
@@ -31,7 +31,7 @@ const DetailsPage = ({ phones }) => {
               />
             </div>
           </div>
-          <div className="md:w-1/2">
+          <div className="sm:w-1/2">
             <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
               Details
             </h2>

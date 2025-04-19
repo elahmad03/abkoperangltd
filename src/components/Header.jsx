@@ -15,7 +15,6 @@ const Header = () => {
     document.documentElement.classList.toggle("dark", darkMode);
   }, [darkMode]);
 
-  // Close search box if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -38,14 +37,14 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow-md z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-4 relative">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 py-4 relative">
         {/* Logo */}
         <RouterLink to="/">
-          <img src={Logo} alt="Logo" className="w-40 sm:w-52" />
+          <img src={Logo} alt="Logo" className="w-32 sm:w-40" />
         </RouterLink>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-4 lg:space-x-6">
           {navItems.map((item) =>
             location.pathname === "/" ? (
               <ScrollLink
@@ -54,7 +53,7 @@ const Header = () => {
                 smooth={true}
                 duration={500}
                 offset={-80}
-                className="text-gray-700 dark:text-gray-200 hover:text-blue-500 cursor-pointer transition-colors"
+                className="text-sm lg:text-base text-gray-700 dark:text-gray-200 hover:text-blue-500 cursor-pointer transition-colors"
               >
                 {item.label}
               </ScrollLink>
@@ -62,7 +61,7 @@ const Header = () => {
               <RouterLink
                 key={item.id}
                 to={`/#${item.id}`}
-                className="text-gray-700 dark:text-gray-200 hover:text-blue-500 transition-colors"
+                className="text-sm lg:text-base text-gray-700 dark:text-gray-200 hover:text-blue-500 transition-colors"
               >
                 {item.label}
               </RouterLink>
@@ -71,39 +70,39 @@ const Header = () => {
         </nav>
 
         {/* Right Controls */}
-        <div className="flex items-center space-x-4">
-          {/* Search Icon */}
+        <div className="flex items-center space-x-2 sm:space-x-4">
+          {/* Search */}
           <button
             onClick={() => setShowSearch((prev) => !prev)}
-            className="p-2 rounded-md bg-white text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 shadow-sm transition-colors duration-300"
+            className="p-2 rounded-md bg-white text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 shadow-sm transition"
           >
-            <FiSearch size={20} />
+            <FiSearch size={18} />
           </button>
 
-          {/* Dark Mode Toggler */}
+          {/* Dark Mode */}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-md bg-white text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 shadow-sm transition-colors duration-300"
+            className="p-2 rounded-md bg-white text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 shadow-sm transition"
           >
-            {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
+            {darkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
           </button>
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md bg-white text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 shadow-sm transition-colors duration-300"
+              className="p-2 rounded-md bg-white text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 shadow-sm transition"
             >
               {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Search Input */}
+        {/* Search Box */}
         {showSearch && (
           <div
             ref={searchRef}
-            className="absolute top-full mt-2 right-4 bg-white dark:bg-gray-800 shadow-md rounded-md p-2 w-64 z-50"
+            className="absolute top-full mt-2 right-4 bg-white dark:bg-gray-800 shadow-lg rounded-md p-2 w-64 sm:w-72 z-50"
           >
             <input
               type="text"
@@ -116,7 +115,7 @@ const Header = () => {
 
       {/* Mobile Nav */}
       {isMenuOpen && (
-        <div className="md:hidden px-6 py-4 bg-white dark:bg-gray-900 space-y-4">
+        <div className="md:hidden bg-white dark:bg-gray-900 px-4 py-4 border-t border-gray-200 dark:border-gray-700 space-y-4 transition-all duration-300 ease-in-out">
           {navItems.map((item) =>
             location.pathname === "/" ? (
               <ScrollLink

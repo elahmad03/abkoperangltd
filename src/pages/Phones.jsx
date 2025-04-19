@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Phones = ({ phones }) => {
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-100 dark:bg-gray-900 py-16 mt-10 md:mt-20 overflow-x-hidden">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-8">
           Explore Our Mobile Phones
         </h2>
