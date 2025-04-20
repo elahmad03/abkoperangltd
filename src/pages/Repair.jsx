@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // If you want to integrate with your routing
 
 // Replace with the actual path to your technician background image
-import technicianBg from '../assets/img/repair.png';
+import technicianBg from '../assets/img/simcardreg.jpg';
 
 const RepairPage = () => {
   const whatsappNumber = '+2348138804305'; // Replace with your actual WhatsApp number

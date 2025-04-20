@@ -1,6 +1,6 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa"; // Example social icons
-import imgLogo from "../assets/img/logo.png";
+import imgLogo from "/img/showcase.png";
 
 const Crypto = () => {
   const companyData = {
@@ -30,11 +30,11 @@ const Crypto = () => {
           "Beyond specific opportunities, we provide educational resources to enhance your understanding of blockchain technology, DeFi, NFTs, and other crucial aspects of the crypto space.",
       },
     ],
-    whatsappGroupLink: "https://wa.me/your-whatsapp-group-invite-link", // Replace with your actual WhatsApp group invite link
+    whatsappGroupLink: "https://chat.whatsapp.com/I0B55abIyTgEogdwBk34Yq", // Replace with your actual WhatsApp group invite link
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 min-h-screen font-sans antialiased">
+    <div className="bg-gray-100 dark:bg-gray-900 min-h-screen font-sans antialiased mt-10">
       <div className="max-w-full sm:max-w-3xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         {/* Company Header */}
         <header className="text-center mb-10">
@@ -42,7 +42,7 @@ const Crypto = () => {
             <img
               src={companyData.logo}
               alt={companyData.name}
-              className="object-cover w-full h-full"
+              className="object-contain w-full h-full"
             />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mt-4">

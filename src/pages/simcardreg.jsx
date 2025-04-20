@@ -6,8 +6,8 @@ const SimcardReg = () => {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello,%20I%20want%20to%20register%20or%20swap%20my%20SIM.%20Please%20assist.`;
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white w-full pt-10 md:pt-20">
-      <div className="w-full mx-auto bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-gray-100 py-16 mt-10 md:mt-20 dark:bg-gray-800 dark:text-white overflow-x-hidden w-full">
+      <div className="max-w-full mx-auto bg-white dark:bg-gray-900 rounded-lg shadow-xl overflow-hidden">
         
         {/* Header Banner */}
         <div
@@ -16,7 +16,7 @@ const SimcardReg = () => {
             backgroundImage: `url(${simcardregBg})`,
           }}
         >
-          <div className="absolute inset-0 bg-indigo-700 bg-opacity-80 dark:bg-indigo-900"></div>
+          <div className="absolute inset-0 bg-indigo-500 opacity-70 dark:bg-indigo-900"></div>
           <div className="relative z-10">
             <h1 className="text-3xl sm:text-4xl font-bold mb-3">Simcard Registration & Swap</h1>
             <p className="text-base sm:text-lg">We register and swap MTN, GLO, Airtel & Etisalat SIMs</p>

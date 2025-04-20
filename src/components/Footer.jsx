@@ -23,7 +23,7 @@ const Footer = () => {
       <footer className="bg-teal-200 text-black dark:bg-cyan-900 dark:text-white py-12 px-6 sm:px-8 w-full ">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
           {/* Left Column */}
-          <div className="space-y-5">
+          <div className="space-y-5" id='about'>
             <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
               ABK Opera Global NG LTD
             </h3>
@@ -37,7 +37,7 @@ const Footer = () => {
             <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Connect With Us</h3>
             <div className="flex gap-5">
               <a 
-                href="https://www.fb.com/opera" 
+                href="https://www.facebook.com/share/1Hac1NzMZP/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Facebook" 
@@ -46,7 +46,7 @@ const Footer = () => {
                 <FaFacebook className="text-white" />
               </a>
               <a 
-                href="http://www.x.com/opera" 
+                href="https://x.com/Abubaka36533120?t=jotyzodgrhF1DpeUGH50HA&s=09" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="Twitter" 

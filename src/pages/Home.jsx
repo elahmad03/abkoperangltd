@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Showcase from '../components/showcase';
-import About from '../components/About';
 import Services from '../components/Services';
 import MissionCarousel from '../components/Mission';
 import Team from '../components/Team';
@@ -28,10 +27,6 @@ function Home() {
       {/* showcase section */}
       <section id="home">
         <Showcase />
-      </section>
-      {/* about */}
-      <section id="about">
-        <About />
       </section>
       {/* services */}
       <section id="services">

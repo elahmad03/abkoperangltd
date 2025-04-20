@@ -12,8 +12,8 @@ const team = [
     role: "Founder & CEO",
     image: operaImg,
     social: {
-      twitter: "https://twitter.com/yourhandle",
-      facebook: "https://facebook.com/yourhandle",
+      twitter: "https://x.com/Abubaka36533120?t=jotyzodgrhF1DpeUGH50HA&s=09",
+      facebook: "https://www.facebook.com/share/1Hac1NzMZP/",
       whatsapp: "2348138804305",
     },
   },
