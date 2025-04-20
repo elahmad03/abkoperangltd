@@ -3,10 +3,12 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Showcase = () => {
   return (
-    <section className="mt-10"
+    <section bg-white className="mt-10"
       style={{
+        backgroundColor: "white",
         backgroundImage: `url('/img/showcase.png')`,
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
+        backgroundRepeat: "no-repeat",
         backgroundPosition: 'center',
         height: '100vh',
         width: '100%',
@@ -21,7 +23,7 @@ const Showcase = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.6)',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
           zIndex: 10,
         }}
       ></div>

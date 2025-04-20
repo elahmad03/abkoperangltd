@@ -15,6 +15,7 @@ import tecnoLogo from './assets/img/tecno.jpg'
 import itelLogo from './assets/img/itelPhone.jpg';
 import iphoneLogo from './assets/img/iphone.jpg';
 import xiomiLogo from './assets/img/xiomi.jpg';
+import SimcardReg from './pages/simcardreg';
 
 
 const phonesData = [
@@ -65,6 +66,7 @@ function App() {
         <Route path="/repair" element={<Repair />} />
         <Route path="/development" element={<Development />} />
         <Route path="/crypto" element={<Crypto />} />
+        <Route path="/simcardreg" element={<SimcardReg />} />
         {/* This route will catch any path that doesn't match the ones above */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>

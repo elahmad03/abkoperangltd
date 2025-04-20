@@ -7,6 +7,7 @@ import Team from '../components/Team';
 import Contact from '../components/Contact';
 import { useLocation } from 'react-router-dom';
 import { animateScroll as ScrollLink } from 'react-scroll';
+import Partners from '../components/Partners';
 
 function Home() {
   const location = useLocation();
@@ -43,6 +44,10 @@ function Home() {
       {/* our team */}
       <section id="team">
         <Team />
+      </section>
+      {/* our partners */}
+      <section id="partners">
+        <Partners />
       </section>
       {/* contact us */}
       <section id="contact">

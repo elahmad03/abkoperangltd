@@ -7,6 +7,7 @@ import accessoriesLogo from "../assets/img/accessories.png";
 import mobilePhone from "../assets/img/mobilePhone.png";
 import phoneRepair from "../assets/img/repair.png";
 import cryptoLogo from "../assets/img/crypto.png";
+import simcardReg from "../assets/img/simcardreg.jpg";
 
 const services = [
   {
@@ -38,6 +39,12 @@ const services = [
     text: "Join the crypto revolution with expert content, trend analysis, and trusted project recommendations.",
     img: cryptoLogo,
     link: "/crypto",
+  },
+  {
+    title: "Simcard Registration",
+    text: "we Offer simcard registration dervice and unbeatable performance.",
+    img: simcardReg,
+    link: "/simcardreg",
   },
 ];
 
